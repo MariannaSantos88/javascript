@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body{
+            font: normal 15pt arial;
+        }
+
+        h1{
+            background-color: gray;
+            color: white;
+            width: 600px;
+            text-align: center;
+        }
+
+        #botao{
+            text-align: center;
+        }
+        input{
+            font: normal 15pt arial;
+            width: 150px;
+        }
+        #res{
+            background-color: gray;
+            color: white;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #somar{
+            background-color: gray;
+            color: white;
+            width: 90px;
+            border: none;
+            border-radius: 50px;          
+        }
+        #caixa{
+            background-color: rgba(0, 0, 0, 0.753);
+            width: 600px;
+            height: 250px;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <main id="caixa">
+        <h1>Somando Valores</h1>
+        <div id="botao">
+            <input type="number" name="txtn1" id="txtn1"> +
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value="Somar" onclick="somar()" id="somar">
+            <div id="res">
+                Resultado
+            </div>
+        </div>
+        
+    </main>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} + ${n2} é = <strong> ${s}</strong>`
+        }
+    </script>
+</body>
+</html>
